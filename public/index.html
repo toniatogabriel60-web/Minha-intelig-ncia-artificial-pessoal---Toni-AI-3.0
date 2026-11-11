@@ -1,0 +1,180 @@
+<!-- Toni ai/public/index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toni AI 3.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="topo">
+            <h1>TONI AI 3.0</h1>
+            <p>Sua inteligência artificial pessoal</p>
+        </header>
+
+        <!-- CHAT -->
+        <main class="chat">
+
+            <div class="mensagens" id="mensagens">
+                <div class="mensagem ia">
+                    Olá! Eu sou a Toni AI 3.0. Como posso ajudar você hoje?
+                </div>
+            </div>
+
+            <div class="area-digitacao">
+                <input
+                    type="text"
+                    id="entrada"
+                    placeholder="Converse com a Toni AI..."
+                    autocomplete="off"
+                >
+                <button id="enviar">Enviar</button>
+            </div>
+
+        </main>
+
+        <!-- PLANOS -->
+        <section class="planos">
+
+            <div class="titulo-planos">
+                <h2>Conheça nossos planos</h2>
+                <p>Escolha a experiência Toni AI ideal para você.</p>
+            </div>
+
+            <div class="lista-planos">
+
+                <div class="plano">
+                    <h3>TONI FREE</h3>
+                    <p class="preco">Grátis</p>
+                    <p>Para começar a conhecer a Toni AI.</p>
+                    <ul>
+                        <li>Conversas com a Toni AI</li>
+                        <li>Ajuda com programação</li>
+                        <li>Recursos básicos</li>
+                        <li>Limite diário de mensagens</li>
+                    </ul>
+                    <button class="botao-plano" type="button">
+                        Plano atual
+                    </button>
+                </div>
+
+                <div class="plano destaque">
+                    <span class="etiqueta">MAIS POPULAR</span>
+                    <h3>TONI PRO</h3>
+                    <p class="preco">R$ 29,90<small>/mês</small></p>
+                    <p>Para quem quer mais produtividade.</p>
+                    <ul>
+                        <li>Mais mensagens por dia</li>
+                        <li>Respostas mais completas</li>
+                        <li>Histórico ampliado</li>
+                        <li>Análise de arquivos</li>
+                        <li>Recursos adicionais</li>
+                    </ul>
+                    <button class="botao-plano" type="button"
+                        onclick="selecionarPlano('PRO')">
+                        Assinar PRO
+                    </button>
+                </div>
+
+                <div class="plano">
+                    <h3>TONI MAX</h3>
+                    <p class="preco">R$ 60,50<small>/mês</small></p>
+                    <p>A experiência mais completa da Toni AI.</p>
+                    <ul>
+                        <li>Limites de uso maiores</li>
+                        <li>Recursos avançados</li>
+                        <li>Análise avançada de arquivos</li>
+                        <li>Prioridade nos recursos</li>
+                        <li>Novidades exclusivas</li>
+                    </ul>
+                    <button class="botao-plano" type="button"
+                        onclick="selecionarPlano('MAX')">
+                        Assinar MAX
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PAGAMENTO PIX -->
+        <section class="assinatura" id="assinatura">
+
+            <div class="titulo-assinatura">
+                <h2>Assine a TONI AI</h2>
+                <p>Finalize sua assinatura através do Pix Nubank.</p>
+            </div>
+
+            <div class="formulario-assinatura">
+
+                <h3>Seus dados</h3>
+
+                <label for="nomeCliente">Nome completo</label>
+                <input type="text" id="nomeCliente"
+                    placeholder="Digite seu nome">
+
+                <label for="emailCliente">E-mail</label>
+                <input type="email" id="emailCliente"
+                    placeholder="Digite seu e-mail">
+
+                <label for="planoEscolhido">Escolha seu plano</label>
+
+                <select id="planoEscolhido">
+                    <option value="PRO">TONI PRO - R$ 29,90/mês</option>
+                    <option value="MAX">TONI MAX - R$ 60,50/mês</option>
+                </select>
+
+                <div class="resumo-assinatura">
+                    <h3>Resumo da assinatura</h3>
+                    <p>Plano: <strong id="resumoPlano">TONI PRO</strong></p>
+                    <p>Valor: <strong id="resumoPreco">R$ 29,90/mês</strong></p>
+                </div>
+
+                <button type="button" id="continuarAssinatura">
+                    Gerar pagamento Pix
+                </button>
+
+                <div id="areaPix" hidden>
+
+                    <h3>Pagamento via Nubank</h3>
+
+                    <p>Faça o Pix utilizando a chave abaixo:</p>
+
+                    <p><strong>Chave Pix: telefone</strong></p>
+
+                    <p id="chavePixExibida">Chave ainda não configurada.</p>
+
+                    <button type="button" id="copiarPix">
+                        Copiar chave Pix
+                    </button>
+
+                    <p id="mensagemPix"></p>
+
+                    <p>
+                        Após pagar, aguarde a confirmação do recebimento.
+                        A liberação do plano será feita após a conferência.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>TONI AI 3.0 © 2026</p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

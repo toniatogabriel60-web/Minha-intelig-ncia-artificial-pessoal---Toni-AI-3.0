@@ -1,0 +1,626 @@
+/* Toni ai/public/styles.css */
+
+/* TONI AI 2.0 - ESTILO PRINCIPAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080812;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.topo h1 {
+    font-size: 48px;
+    color: #a855f7;
+    margin-bottom: 12px;
+    text-shadow: 0 0 25px #9333ea;
+}
+
+.topo p {
+    color: #c4b5fd;
+    font-size: 18px;
+}
+
+.chat {
+    flex: 1;
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #11111f;
+    border: 1px solid #35204e;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.mensagens {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mensagem {
+    max-width: 80%;
+    padding: 15px 18px;
+    border-radius: 14px;
+    line-height: 1.5;
+}
+
+.mensagem.ia {
+    background: #251438;
+    border: 1px solid #7135a5;
+    align-self: flex-start;
+    color: #ffffff;
+}
+
+.area-digitacao {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.area-digitacao input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #493060;
+    background: #090914;
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+.area-digitacao input:focus {
+    border-color: #a855f7;
+}
+
+.area-digitacao button {
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.area-digitacao button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 18px #9333ea;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #77738b;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .topo h1 {
+        font-size: 36px;
+    }
+
+    .chat {
+        padding: 15px;
+    }
+
+    .area-digitacao {
+        flex-direction: column;
+    }
+
+    .area-digitacao button {
+        padding: 14px;
+    }
+}
+
+/* ===== BALÕES DE CONVERSA ===== */
+
+.mensagem {
+    max-width: 80%;
+    padding: 15px 18px;
+    margin: 8px 0;
+    border-radius: 16px;
+    line-height: 1.6;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Mensagens da Toni AI */
+.mensagem.ia {
+    align-self: flex-start;
+    background: #251438;
+    border: 1px solid #7135a5;
+    color: #ffffff;
+    border-bottom-left-radius: 4px;
+}
+
+/* Mensagens do usuário */
+.mensagem.usuario {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    color: #ffffff;
+    border: 1px solid #a855f7;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.2);
+}
+
+/* Espaçamento da conversa */
+.mensagens {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* ==================================
+   PLANOS TONI AI 3.0
+================================== */
+
+.planos {
+    width: 100%;
+    margin-top: 55px;
+    padding: 30px 0;
+}
+
+.titulo-planos {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-planos h2 {
+    font-size: 32px;
+    color: #a78bfa;
+    margin-bottom: 10px;
+}
+
+.titulo-planos p {
+    color: #b8b8c9;
+}
+
+.lista-planos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.plano {
+    position: relative;
+    background: linear-gradient(145deg, #191927, #10101a);
+    border: 1px solid #34344b;
+    border-radius: 18px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.plano:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.18);
+}
+
+.plano h3 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.preco {
+    color: #a78bfa;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.preco small {
+    font-size: 14px;
+    color: #b8b8c9;
+}
+
+.plano > p:not(.preco) {
+    color: #b8b8c9;
+    min-height: 40px;
+}
+
+.plano ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.plano li {
+    color: #e4e4ec;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.plano li::before {
+    content: "✓";
+    color: #a78bfa;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.botao-plano {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: #7045d8;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-plano:hover {
+    background: #8b5cf6;
+    transform: scale(1.03);
+}
+
+.destaque {
+    border: 2px solid #8b5cf6;
+    background: linear-gradient(145deg, #282044, #151020);
+    transform: scale(1.03);
+}
+
+.destaque:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #8b5cf6;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.aviso-planos {
+    color: #88889c;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+    .lista-planos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .destaque {
+        transform: none;
+    }
+
+    .destaque:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* ==================================
+   TELA DE ASSINATURA TONI AI 3.0
+================================== */
+
+.assinatura {
+    width: 100%;
+    margin-top: 60px;
+    padding: 35px 20px;
+    background: linear-gradient(145deg, #191927, #10101a);
+    border: 1px solid #34344b;
+    border-radius: 20px;
+}
+
+.titulo-assinatura {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-assinatura h2 {
+    color: #a78bfa;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.titulo-assinatura p {
+    color: #b8b8c9;
+}
+
+.formulario-assinatura {
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+    background: #11111d;
+    border: 1px solid #393950;
+    border-radius: 16px;
+}
+
+.formulario-assinatura h3 {
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.formulario-assinatura label {
+    display: block;
+    color: #d8d8e8;
+    margin: 16px 0 8px;
+}
+
+.formulario-assinatura input,
+.formulario-assinatura select {
+    width: 100%;
+    padding: 14px;
+    background: #202033;
+    border: 1px solid #41415c;
+    border-radius: 9px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario-assinatura input:focus,
+.formulario-assinatura select:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.2);
+}
+
+.resumo-assinatura {
+    margin-top: 25px;
+    padding: 20px;
+    background: #242039;
+    border: 1px solid #7045d8;
+    border-radius: 12px;
+}
+
+.resumo-assinatura h3 {
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+.resumo-assinatura p {
+    color: #eeeeff;
+    margin: 10px 0;
+}
+
+.resumo-assinatura strong {
+    color: #a78bfa;
+}
+
+#continuarAssinatura {
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    background: linear-gradient(90deg, #7045d8, #9b5cf6);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#continuarAssinatura:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.aviso-assinatura {
+    color: #9292a8;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    .assinatura {
+        padding: 25px 12px;
+    }
+
+    .formulario-assinatura {
+        padding: 20px;
+    }
+
+    .titulo-assinatura h2 {
+        font-size: 25px;
+    }
+}
+
+/* ==================================
+   AUTENTICAÇÃO - TONI AI 3.0
+================================== */
+
+.autenticacao {
+    width: 100%;
+    margin: 35px auto;
+    padding: 35px 25px;
+    background: linear-gradient(145deg, #191927, #10101a);
+    border: 1px solid #493060;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.12);
+}
+
+.titulo-autenticacao {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-autenticacao h2 {
+    color: #a78bfa;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.titulo-autenticacao p {
+    color: #b8b8c9;
+}
+
+.area-autenticacao {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.formulario-auth {
+    padding: 25px;
+    background: #11111d;
+    border: 1px solid #493060;
+    border-radius: 16px;
+}
+
+.formulario-auth h3 {
+    color: #a78bfa;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.formulario-auth label {
+    display: block;
+    color: #d8d8e8;
+    margin: 15px 0 8px;
+}
+
+.formulario-auth input {
+    width: 100%;
+    padding: 14px;
+    background: #202033;
+    border: 1px solid #41415c;
+    border-radius: 9px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario-auth input:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+}
+
+.formulario-auth button,
+.usuario-conectado button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario-auth button:hover,
+.usuario-conectado button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.mensagem-auth {
+    margin-top: 15px;
+    color: #c4b5fd;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.usuario-conectado {
+    max-width: 550px;
+    margin: 25px auto 0;
+    padding: 25px;
+    background: #242039;
+    border: 1px solid #8b5cf6;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.usuario-conectado h3 {
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+.usuario-conectado p {
+    color: #eeeeff;
+    margin: 10px 0;
+}
+
+.usuario-conectado strong {
+    color: #a78bfa;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+    .area-autenticacao {
+        grid-template-columns: 1fr;
+    }
+
+    .autenticacao {
+        padding: 25px 15px;
+    }
+
+    .titulo-autenticacao h2 {
+        font-size: 25px;
+    }
+}
+#copiarPix {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#copiarPix:hover {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
